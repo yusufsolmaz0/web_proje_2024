@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display:inline;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  nav ul li a:hover {
+    color: #868282;
+  }
+  
+
+  .ekran {
+    height: 110vh;
+    background-image: url("arkaplan.jpeg");
+    background-position: center;
+    background-size:cover ;
+    display:flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .ekran .icerik {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .ekran .icerik h2 {
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 70px;
+  }
+  
+  .ekran .icerik p {
+    font-weight: 300;
+    max-width: 600px;
+    margin-top: 15px;
+  }
+  
+  .ekran .icerik button {
+    background: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 38px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  
+  .ekran .icerik button:hover {
+    color: #fff;
+    background: #2954ba;
+  }
