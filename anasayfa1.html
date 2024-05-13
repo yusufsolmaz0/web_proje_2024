@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anasayfa</title>
+  <link rel="stylesheet" href="anasayfa1.css">
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#">Anasayfa<span></span></a>
+      <ul class="menu">
+        <li><a href="#">Mirasımız</a></li>
+        <li><a href="#">Şehrim</a></li>
+        <li><a href="#">Özgeçmiş</a></li>
+        <li><a href="#">Hakkında</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="content">
+      <h2>Yusuf Ali Solmaz</h2>
+      <p>
+        Ben Yusuf Ali Solmaz 5 kişilik bir ailenin en büyük çocuğuyum. <br>
+        28 Ağustos 2003 tarihinde Eskişehir'de doğdum.
+      </p>
+      <br>
+      <h3>Hobilerim</h3>
+      <p>
+        Hobilerim arasında bilgisayar oyunları, kitap okumak ve film izlemek bulunuyor.
+        Oynadığım oyunlar ve izlediğim filmlerde daha çok bilim kurgu ve macera türünü tercih ederim.
+        Okuduğum kitaplarda ise her çeşide şans vermeye çalışırım.
+        Bu hobiler, benim için keyifli ve verimli zaman geçirmenin bir yolu.
+      </p>
+      <br>
+      <a href="hakkında.html" target="_self">
+        <button>Hakkımda</button>
+
+      </a>
+
+
+
+    </div>
+  </section>
+
+
+  <script>
+    const header = document.querySelector("header");
+    const hamburgerBtn = document.querySelector("#hamburger-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+
+    hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+    closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+  </script>
+
+</body>
+
+</html>
