@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim</title>
+    <link rel="stylesheet" href="sehrim.css">
+
+
+</head>
+
+<body>
+
+    <body>
+
+
+        <header>
+            <nav class="navbar">
+                <a class="logo" href="anasayfa.html">Anasayfa<span></span></a>
+                <ul class="menu">
+                    <li><a href="#">Mirasımız</a></li>
+                    <li><a href="#">Şehrim</a></li>
+                    <li><a href="#">Özgeçmiş</a></li>
+                    <li><a href="#">Hakkında</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="icerik">
+            <div class="container-section">
+
+                <div class="bilgi">
+                    <h2>Kütahya</h2>
+                    <p>
+                        Kütahya, Türkiye'nin Ege Bölgesi'nde bulunan bir il ve şehirdir. Tarihi, antik dönemlere kadar
+                        uzanan Kütahya, zengin kültürel mirası, doğal güzellikleri ve el sanatlarıyla tanınır. İlin
+                        ekonomisi
+                        tarım, seramik üretimi, madencilik ve el sanatlarına dayanmaktadır. <br> <br>
+                        Kütahya'nın tarihi, Frigler, Lidyalılar, Persler, Romalılar, Bizanslılar ve Osmanlılar gibi
+                        çeşitli
+                        medeniyetlere ev sahipliği yapmıştır. Kentteki tarihi eserler arasında Kütahya Kalesi, Çini
+                        Müzesi, Ulu
+                        Camii ve Çinili Camii gibi önemli yapılar bulunmaktadır. <br>
+                        Kütahya, aynı zamanda ünlü Kütahya çinilerinin ve seramiklerinin üretildiği bir merkezdir.
+                        Kütahya
+                        çinileri, geleneksel el sanatlarından biri olarak değerlendirilir ve dünya çapında tanınır.
+                    </p>
+
+                </div>
+                <div class="resimler">
+                    <img src="kutahya.jpg" width="450" height="300" alt="Saat Kulesi">
+                </div>
+            </div>
+            
+        </section>
+        
+
+
+        <script>
+            const header = document.querySelector("header");
+            const hamburgerBtn = document.querySelector("#hamburger-btn");
+            const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+
+            hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+            closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+        </script>
+
+    </body>
+
+</html>
