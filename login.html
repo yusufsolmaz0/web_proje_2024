@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,37 @@
     <link rel="stylesheet" href="login.css">
     <title>Giriş</title>
     <style>
-        body{
+        body {
             background-image: url(arkaplan.jpeg);
-            background-size:contain;
-            background-position-x:center;
+            background-size: contain;
+            background-position-x: center;
         }
     </style>
 </head>
+
 <body>
     <div class="login-box">
         <div class="login-header">
             <header>Giriş</header>
         </div>
+        <form action="login.php" method="post">
+
         <div class="input-box">
-            <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+            <input type="text" id="username" name="username" required class="input-field" placeholder="Email"
+                autocomplete="off" required>
         </div>
         <div class="input-box">
-            <input type="password" class="input-field" placeholder="Şifre" autocomplete="off" required>
+            <input type="password" id="password" name="password" required class="input-field" placeholder="Şifre"
+                autocomplete="off" required>
         </div>
         <div class="input-submit">
-            <a href="anasayfa.html" target="_self">
-                <button class="submit-btn" id="submit" ></button>
-                <label for="submit">Giriş Yap</label>
-            </a>
+            <input type="submit" value="Login" class="submit-btn" >
+            <label for="submit-btn">Giriş</label>
         </div>
-        
+
+        </form>
+
     </div>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-*/{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,8 +44,8 @@
     color: #000000;
   }
   
-  body {
-    height: 90vh;
+  .icerik {
+    height: 100vh;
     background-image: url("arkaplan.jpeg");
     background-position: left;
     background-size:cover;
@@ -63,7 +63,7 @@
   
   .icerik .bilgi h2 {
     font-size: 3rem;
-    max-width: 600px;
+    max-width: 0px;
     line-height: 70px;
   }
   
@@ -108,7 +108,6 @@
     header {
       padding: 10px;
     }
-    
   
     header.show-mobile-menu::before {
       content: "";
@@ -166,56 +165,3 @@
       padding: 9px 18px;
     }
   }
-  .container-section{
-    display: flex;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-  }
-  .container-section .resimler{
-    display: flex;
-    position: relative;
-    top: 50px;
-    left: 220px;
-  }
-
-  .slider-container {
-    position: relative;
-    width: 40%;
-    margin: 0 auto;
-    overflow: hidden;
-    top: 50px;
-    left: 300px;
-}
-
-.slider {
-    display: flex;
-}
-
-.slide {
-    flex: 0 0 100%;
-    height: 300px;
-    background-size: cover;
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-  
-  

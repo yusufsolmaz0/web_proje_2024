@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takımımız</title>
+    <link rel="stylesheet" href="takimimiz.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="anasayfa.html">Anasayfa<span></span></a>
+            <ul class="menu">
+                <li><a href="takimimiz.html">Takımımız</a></li>
+                <li><a href="sehrim.html">Şehrim</a></li>
+                <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="icerik">
+        <div class="bilgi">
+            <h2>TKİ Tavşanlı Linyitspor</h2>
+            <p>
+                TKİ Tavşanlı Linyitspor, Türk futbolunun köklü takımlarından biri olarak bilinir. Özellikle 1984-1985
+                sezonunda Türkiye Profesyonel 3. Ligi'nde gösterdiği parlak performansla adını duyurmuştur. Takım, 11
+                yıl boyunca üst üste şampiyonluk mücadelesi vererek Türkiye Kupası'na katılma hakkı elde etmiş ve
+                ülkenin önde gelen takımlarıyla çekişmeli müsabakalara imza atmıştır. Ancak uzun yıllar süren çabalarına
+                rağmen 2. Lig'e yükselmeyi başaramamıştır. Zaman zaman lig değişiklikleri ve mücadeleler yaşasa da, TKİ
+                Tavşanlı Linyitspor, 2006-2007 sezonunda 3. Lig'e çıkarak önemli bir adım atmış ve ardından gösterdiği
+                performansla 2. Lig'e yükselmiştir. Bu süreçte yaşadığı iniş ve çıkışlara rağmen, kulüp 81 yıllık
+                tarihinde en parlak dönemlerini yaşamış ve önemli başarılara imza atmıştır. Bugünse Bölgesel Amatör
+                Lig'de mücadelesini sürdüren TKİ Tavşanlı Linyitspor, köklü geçmişiyle Türk futbolunun önemli bir
+                parçası olarak varlığını sürdürmektedir.
+            </p>
+
+        </div>
+        <div class="resimler">
+            <img src="linyit.png" alt="TKİ Tavşanlı Linyitspor" width="400px">
+        </div>
+    </section>
+
+
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+        closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+
+</body>
+
+</html>
