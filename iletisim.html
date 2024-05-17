@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\Odev\iletisim.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="C:\xampp\htdocs\Odev\validate.js" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="anasayfa.html">Anasayfa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="takimimiz.html">Takımımız</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sehrim.html">Şehrim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="iletisim.html">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1>İletişim</h1>
+        <form action="iletisim.php" method="post" novalidate>
+            <div class="form-group">
+                <label for="name">İsim</label>
+                <input type="text" class="form-control" id="name" name="name" aria-label="İsim" required>
+                <div class="invalid-feedback">Lütfen isminizi girin.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" aria-label="E-mail" required>
+                <div class="invalid-feedback">Lütfen geçerli bir e-mail adresi girin.</div>
+            </div>
+            <div class="form-group">
+                <label for="date">Tarih</label>
+                <input type="date" class="form-control" id="date" name="date" aria-label="Tarih" required>
+                <div class="invalid-feedback">Lütfen geçerli bir tarih girin.</div>
+            </div>
+            <div class="form-group">
+                <label for="message">Mesaj</label>
+                <textarea class="form-control" id="message" name="message" rows="4" aria-label="Mesaj" required></textarea>
+                <div class="invalid-feedback">Lütfen bir mesaj girin.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Gönder</button>
+            <button type="reset" class="btn btn-secondary">Temizle</button>
+        </form>
+    </div>
+</body>
+</html>
