@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım</title>
+    <link rel="stylesheet" href="ilgi_alanlarim.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #data {
+            list-style-type: none;
+            padding: 0;
+        }
+        #data li {
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .movie {
+            margin-bottom: 20px;
+        }
+        .movie-title {
+            font-weight: bold;
+        }
+        .movie-poster {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .movie-info {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="anasayfa.html">Anasayfa<span></span></a>
+            <ul class="menu">
+                <li><a href="takimimiz.html">Takımımız</a></li>
+          <li><a href="sehrim.html">Şehrim</a></li>
+          <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+          <li><a href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Film Arama Uygulaması</h1>
+    <input type="text" id="searchInput" placeholder="Film adı girin">
+    <button onclick="fetchData()">Ara</button>
+    <ul id="data"></ul>
+
+    <script>
+        async function fetchData() {
+            const dataList = document.getElementById('data');
+            const searchInput = document.getElementById('searchInput').value.trim();
+            dataList.innerHTML = '<li>Yükleniyor...</li>';
+
+            if (!searchInput) {
+                dataList.innerHTML = '<li>Lütfen bir film adı girin</li>';
+                return;
+            }
+
+            const apiKey = '13eff7fa'; 
+
+            try {
+                const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchInput)}`);
+                if (!response.ok) {
+                    throw new Error('Ağ hatası oldu');
+                }
+                const data = await response.json();
+                
+                dataList.innerHTML = ''; 
+
+                if (data.Response === "False") {
+                    dataList.innerHTML = '<li>Sonuç bulunamadı</li>';
+                    return;
+                }
+
+                data.Search.forEach(movie => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'movie';
+
+                    const movieInfo = document.createElement('div');
+                    movieInfo.className = 'movie-info';
+
+                    const moviePoster = document.createElement('img');
+                    moviePoster.className = 'movie-poster';
+                    moviePoster.src = movie.Poster !== "N/A" ? movie.Poster : 'placeholder.png';
+                    moviePoster.alt = movie.Title;
+
+                    const movieDetails = document.createElement('div');
+                    const movieTitle = document.createElement('div');
+                    movieTitle.className = 'movie-title';
+                    movieTitle.textContent = `${movie.Title} (${movie.Year})`;
+
+                    const movieType = document.createElement('div');
+                    movieType.textContent = `Tür: ${movie.Type}`;
+
+                    movieDetails.appendChild(movieTitle);
+                    movieDetails.appendChild(movieType);
+                    movieInfo.appendChild(moviePoster);
+                    movieInfo.appendChild(movieDetails);
+                    listItem.appendChild(movieInfo);
+
+                    dataList.appendChild(listItem);
+                });
+            } catch (error) {
+                dataList.innerHTML = `<li>Veri alırken hata oluştu: ${error.message}</li>`;
+            }
+        }
+    </script>
+</body>
+</html>
